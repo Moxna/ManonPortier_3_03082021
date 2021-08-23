@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style PC -->
-    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="style/stylepc.css" media="screen and (max-width: 3000px) and (min-width: 1000px)" />
     <!-- Style Mobile -->
-    <link rel="stylesheet" href="stylemobile.css" media="screen and (max-width: 680px)" />
+    <link rel="stylesheet" href="style/stylemobile.css" media="screen and (max-width: 680px)" />
     <!-- Style Tablette -->
-    <link rel="stylesheet" href="" media="screen and (max-width: 999px) and (min-width: 681px)" />
+    <link rel="stylesheet" href="style/styletablette.css" media="screen and (max-width: 999px) and (min-width: 681px)" />
     <!-- Kit Fontawesome -->
     <script src="https://kit.fontawesome.com/03dc95f8fe.js" crossorigin="anonymous"></script>
     <!-- Roboto Font -->
@@ -20,127 +20,127 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
     </style>
-    <!-- Titre du site -->
-    <title>Ohmyfood!</title>
+    <!-- Titre de la page -->
+    <title>Ohmyfood! - Accueil</title>
 </head>
 
 <body>
-    <div class="websitecontainer">
 
-        <!-- Logo entête -->
-        <div class="entetelogo">
+    <!-- Logo entête -->
+    <div class="entetelogo">
         <img src="imgs/ohmyfood.png" class="logo" alt="Logo Ohmyfood!" />
-        </div>
+    </div>
 
-        <!-- Icône et texte - Situation géographique -->
-        <div class="situation">
-            <i class="fas fa-map-marker-alt position"></i>
-            <p class="situationtxt">Paris, Belleville</p>
-        </div>
+    <!-- Icône et texte - Situation géographique -->
+    <div class="situation">
+        <i class="fas fa-map-marker-alt position"></i>
+        <p class="situationtxt">Paris, Belleville</p>
+    </div>
 
-        <!-- Bannière accueil -->
-        <div class="banniereaccueil">
-            <h1 class="banniereaccueiltitle">Réservez le menu qui vous convient</h1>
-            <p class="banniereaccueiltxt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="explorer">
-                <a href="#blocrestaurants">
+    <!-- Bannière accueil -->
+    <div class="banniereaccueil">
+        <h1 class="banniereaccueiltitle">Réservez le menu qui vous convient</h1>
+        <p class="banniereaccueiltxt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <div class="button">
+            <a href="#sectionrestaurants">
                 <p class="txtbutton">Explorer nos restaurants</p>
-                </a>
-            </div>
+            </a>
         </div>
+    </div>
 
-        <!-- Section fonctionnement -->
-        <h1 class="fonctionnement">Fonctionnement</h1>
+    <!-- Section fonctionnement -->
+    <h1 class="fonctionnement">Fonctionnement</h1>
 
-            <!-- 1 | Choisissez un restaurant -->
-            <div class="etiq">
-                <p class="number">1</p>
-                <i class="fas fa-mobile-alt mobilephone"></i>
-                <p class="etiqtxt">Choisissez un restaurant</p>
-            </div>
+    <!-- 1 | Choisissez un restaurant -->
+    <div class="etiq">
+        <p class="number">1</p>
+        <i class="fas fa-mobile-alt iconfonction"></i>
+        <p class="etiqtxt">Choisissez un restaurant</p>
+    </div>
 
-            <!-- 2 | Composez votre menu -->
-            <div class="etiq">
-                <p class="number">2</p>
-                <i class="fas fa-list list"></i>
-                <p class="etiqtxt">Composez votre menu</p>
-            </div>          
+    <!-- 2 | Composez votre menu -->
+    <div class="etiq">
+        <p class="number">2</p>
+        <i class="fas fa-list iconfonction"></i>
+        <p class="etiqtxt">Composez votre menu</p>
+    </div>
 
-            <!-- 3 | Dégustez au restaurant -->
-            <div class="etiqpurple">
-                <p class="number">3</p>
-                <i class="fas fa-store store"></i>
-                <p class="etiqtxt">Dégustez au restaurant</p>
-            </div>
+    <!-- 3 | Dégustez au restaurant -->
+    <div class="etiq">
+        <p class="number">3</p>
+        <i class="fas fa-store iconfonction"></i>
+        <p class="etiqtxt">Dégustez au restaurant</p>
+    </div>
 
-        <!-- Section restaurants -->
-        <div id="blocrestaurants">
+    <!-- Section restaurants -->
+    <div id="sectionrestaurants">
+        <div class="blocrestaurants">
             <h1 class="restaurants">Restaurants</h1>
-        
+
             <!-- La palette du goût -->
             <div class="homeblocs">
                 <a href="palettedugout.html">
-                <img src="imgs/palettedugout.jpg" class="homeblocsimg" alt="La Palette du Goût - Ohmyfood!" />
-                <h2 class="homeblocstitle">La Palette du Goût</h2>
-                <p class="homeblocstxt">Ménilmontant</p>
-                </a> 
+                    <img src="imgs/palettedugout.jpg" class="homeblocsimg" alt="La Palette du Goût - Ohmyfood!" />
+                    <h2 class="homeblocstitle">La Palette du Goût</h2>
+                    <p class="homeblocstxt">Ménilmontant</p>
+                </a>
                 <i class="far fa-heart heart"></i>
             </div>
 
             <!-- La note enchantée -->
             <div class="homeblocs">
                 <a href="noteenchantee.html">
-                <img src="imgs/noteenchantee.jpg" class="homeblocsimg" alt="La Note Enchantée - Ohmyfood!" />
-                <h2 class="homeblocstitle">La Note Enchantée</h2>
-                <p class="homeblocstxt">Charonne</p>
+                    <img src="imgs/noteenchantee.jpg" class="homeblocsimg" alt="La Note Enchantée - Ohmyfood!" />
+                    <h2 class="homeblocstitle">La Note Enchantée</h2>
+                    <p class="homeblocstxt">Charonne</p>
                 </a>
-                <i class="far fa-heart heart"></i> 
+                <i class="far fa-heart heart"></i>
             </div>
 
             <!-- À la française -->
             <div class="homeblocs">
                 <a href="alafrancaise.html">
-                <img src="imgs/alafr.jpg" class="homeblocsimg" alt="À la Française - Ohmyfood!" />
-                <h2 class="homeblocstitle">À la Française</h2>
-                <p class="homeblocstxt">Cité Rouge</p>
+                    <img src="imgs/alafr.jpg" class="homeblocsimg" alt="À la Française - Ohmyfood!" />
+                    <h2 class="homeblocstitle">À la Française</h2>
+                    <p class="homeblocstxt">Cité Rouge</p>
                 </a>
-                <i class="far fa-heart heart"></i> 
+                <i class="far fa-heart heart"></i>
             </div>
 
             <!-- Le délice des sens -->
             <div class="homeblocs">
                 <a href="delicedessens.html">
-                <img src="imgs/delicedessens.jpg" class="homeblocsimg" alt="Le Délice des Sens - Ohmyfood!" />
-                <h2 class="homeblocstitle">Le Délice des Sens</h2>
-                <p class="homeblocstxt">Folie Méricourt</p>
+                    <img src="imgs/delicedessens.jpg" class="homeblocsimg" alt="Le Délice des Sens - Ohmyfood!" />
+                    <h2 class="homeblocstitle">Le Délice des Sens</h2>
+                    <p class="homeblocstxt">Folie Méricourt</p>
                 </a>
-                <i class="far fa-heart heart"></i> 
+                <i class="far fa-heart heart"></i>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
+
+    <!-- Footer -->
+
+    <footer>
         <div class="footer">
-
-            <img src="imgs/ohmyfood@2x.svg" class="logosvg" alt="Logo Ohmyfood!"/>
-
+            <img src="imgs/ohmyfood@2x.svg" class="logosvg" alt="Logo Ohmyfood!" />
             <div class="icontxtfooter">
-                <i class="fas fa-utensils couverts"></i>
+                <i class="fas fa-utensils footericon"></i>
                 <p class="txtfooter">Proposer un restaurant</p>
             </div>
-
             <div class="icontxtfooter">
-                <i class="fas fa-hands-helping partnair"></i>
+                <i class="fas fa-hands-helping footericon"></i>
                 <p class="txtfooter">Devenir partenaire</p>
             </div>
-
             <div class="noicontxtfooter">
-                <p class="txtfooter2">Mentions légales</p>
-                <p class="txtfooter2">Contact</p>
+                <p class="txtfooter">Mentions légales</p>
+                <p class="txtfooter">Contact</p>
             </div>
-
         </div>
+    </footer>
 
 
-    </div>
 </body>
+
 </html>
