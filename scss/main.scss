@@ -1,0 +1,368 @@
+/*Réfs*/
+
+$lightshadow : #c0c0c0;
+$lightgray : #f7f7f7;
+$darkgray: rgb(238, 238, 238);
+$anthracite : rgb(66, 63, 63);
+$ardoise: rgb(43, 42, 42);
+$white: #ffff;
+$black: #000000;
+$gradient: linear-gradient(to top, #9356DC, #FF79DA);
+$lilas: #f8e9ff;
+$purple: #9356DC;
+
+*
+{
+    text-decoration: none;
+    margin: 0px;
+}
+
+/*Body*/
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+}
+
+.toutelapage
+{
+    background-color: $lightgray;
+}
+
+/*Header Logo*/
+
+.header
+{
+    background-color: $white;
+    height: 40px;
+    align-items: center;
+
+        &--logo {
+            width: 150px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+        }
+
+        &--arrow {
+            transform: translateY(-22px);
+            padding-left: 1rem;
+            font-weight: 800;
+            font-size: 20px;
+            color: rgb(54, 54, 54);
+        }
+}
+
+/*Situation géographique*/
+
+.container__situation
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 3px 3px 3px #ccd1d1 inset;
+
+        &--icon {
+            color: $anthracite;
+            position: absolute;
+            margin-left: -140px;
+        }
+
+        &--txt {
+            font-weight: 500;
+            font-size: 14px;
+        }
+}
+
+/*Bannière concept*/
+
+.container__accueil
+{
+    background-color: $lightgray;
+    height: 280px;
+
+        &--title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 900;
+            margin-top: 0px;
+            padding-top: 40px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        &--txt {
+            text-align: center;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 10px;
+            font-weight: 350;
+        }
+}
+
+.button
+{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: $gradient;
+    width: 190px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px $lightshadow;
+
+    &--txt {
+        text-align: center;
+        color: $white;
+        font-size: 14px;
+        padding: 15px 0px;
+    }
+}
+
+/*Section fonctionnement*/
+
+.container__etiq
+{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+
+    &--bloc {
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $lightgray;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 70px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px $lightshadow;
+    }
+
+    &--bloc:hover {
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f8e9ff;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 70px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px $lightshadow;
+    }
+
+    &--bloc:hover &--icon {
+        margin-right: 20px;
+        color: $purple;
+    }
+
+    &--number {
+        background-color: $purple;
+        border-radius: 200px;
+        margin-right: 20px;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        color: $white;
+        font-size: 12px;
+        transform: translateX(-8px);
+    }
+
+    &--icon {
+        margin-right: 20px;
+        color: $anthracite;
+    }
+}
+
+/*Section restaurants*/
+
+.container__restaurants
+{
+    &--titlehead {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    }
+
+    &--section {
+        display: block;
+        background-color: $lightgray;
+        margin-bottom: 5rem;
+    }
+
+    &--bloc {
+        margin-left: 1rem;
+        width: 90%;
+        height: 220px;
+        background-color: $white;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 10px 5px 5px $lightshadow;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &--img {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px 10px 0px 0px;
+        object-fit: cover;
+    }
+
+    &--title {
+        font-size: 16px;
+        font-weight: 800;
+        color: black;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    &--txt {
+        font-size: 16px;
+        font-weight: 400;
+        color: $black;
+        margin-left: 10px;
+    }
+
+    &--heart {
+        float: right;
+        margin-right: 20px;
+        transform: translateY(-35px);
+        font-size: 20px;
+    }
+}
+
+/*Footer*/
+
+.footer
+{
+    background-color: $ardoise;
+    padding-bottom: 1rem;
+
+    &--logo {
+        padding-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        width: 100px;
+    }
+    
+    &--icontxt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1.3rem;
+        color: $white;
+    }
+
+    &--noicontxt {
+        margin-left: 1rem;
+    }
+
+    &--icon {
+        margin-right: 10px;
+        width: 10px;
+        font-size: 12px;
+    }
+
+    &--txt {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 3px;
+        color: $white;
+    }
+}
+
+/* Style menu restaus */
+
+.header__imgpagemenu
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+.container__menu
+{
+    background-color: $lightgray;
+    height: auto;
+    width: auto;
+    border-radius: 40px 40px 0px 0px;
+    padding : 1rem;
+    transform: translateY(-50px);
+
+    &--head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &--title {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500 ;
+        font-size: 30px;
+    }
+
+    &--barreverte {
+        height: 4px;
+        width: 50px;
+        background-color: #99E2D0;
+    }
+
+    &--heartmenu {
+        font-size: 20px;
+        color: rgb(99, 99, 99);
+    }
+
+    &--typeplat {
+        font-weight: 300;
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    &--bloc {
+        background-color: $white;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px $lightshadow;
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    &--titreplat {
+        color: $anthracite;
+        margin-bottom: 3px;
+        font-size: 20px;
+    }
+
+    &--infoplat {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &--soustitreplat {
+        color: $ardoise;
+        font-weight: 300;
+    }
+
+    &--prix {
+        font-weight: 800;
+        color: $ardoise;
+    }
+}

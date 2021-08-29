@@ -18,9 +18,16 @@ body
     background-color: #f7f7f7;
 }
 
-/*Entête*/
+/*Header - Logo*/
 
-.logo 
+.header
+{
+    background-color: white;
+    height: 40px;
+    align-items: center;
+}
+
+.header--logo 
 {
     width: 150px;
     display: block;
@@ -30,14 +37,7 @@ body
 
 }
 
-.entetelogo
-{
-    background-color: white;
-    height: 40px;
-    align-items: center;
-}
-
-.arrow
+.headarrow
 {
     transform: translateY(-22px);
     padding-left: 1rem;
@@ -48,7 +48,7 @@ body
 
 /*Situation géographique*/
 
-.situation
+.container__situation
 {
     display: flex;
     flex-direction: row;
@@ -59,14 +59,14 @@ body
     box-shadow: 3px 3px 3px #ccd1d1 inset;
 }
 
-.position
+.container__situation--icon
 {
     color:rgb(66, 63, 63);
     position: absolute;
     margin-left: -140px;
 }
 
-.situationtxt
+.container__situation--txt
 {
     font-weight: 500;
     font-size: 14px;
@@ -74,13 +74,13 @@ body
 
 /*Bannière accueil*/
 
-.banniereaccueil
+.container__accueil
 {
     background-color: #f7f7f7;
     height: 280px;
 }
 
-.banniereaccueiltitle
+.container__accueil--title
 {
     text-align: center;
     font-size: 25px;
@@ -91,7 +91,7 @@ body
     margin-right: 50px;
 }
 
-.banniereaccueiltxt
+.container__accueil--txt
 {
     text-align: center;
     margin-left: 30px;
@@ -112,7 +112,7 @@ body
     box-shadow: 3px 3px 5px #c0c0c0;
 }
 
-.txtbutton
+.button--txt
 {
     text-align: center;
     color: white;
@@ -122,7 +122,7 @@ body
 
 /*Section fonctionnement*/
 
-.fonctionnement
+.container__etiq
 {
     font-size: 20px;
     font-weight: 700;
@@ -131,7 +131,7 @@ body
     margin-bottom: 2rem;
 }
 
-.etiq
+.container__etiq--bloc
 {
     margin-right: auto;
     margin-left: auto;
@@ -146,7 +146,7 @@ body
     box-shadow: 5px 5px 5px #e9e9e9;
 }
 
-.etiq:hover
+.container__etiq--bloc:hover
 {
     margin-right: auto;
     margin-left: auto;
@@ -161,13 +161,13 @@ body
     box-shadow: 5px 5px 5px #e9e9e9;
 }
 
-.etiq:hover .iconfonction
+.container__etiq--bloc:hover .container__etiq--icon
 {
     margin-right: 20px;
     color: #9356DC;
 }
 
-.number
+.container__etiq--number
 {
     background-color: #9356DC;
     border-radius: 200px;
@@ -181,7 +181,7 @@ body
     transform: translateX(-8px);
 }
 
-.iconfonction 
+.container__etiq--icon 
 {
     margin-right: 20px;
     color: rgb(94, 94, 94);
@@ -190,7 +190,7 @@ body
 
 /*Section restaurants*/
 
-.restaurants
+.container__restaurants--titlehead
 {
     font-size: 20px;
     font-weight: 700;
@@ -200,15 +200,14 @@ body
     padding-top: 2rem;
 }
 
-.blocrestaurants
+.container__restaurants--section
 {
    display: block;
    background-color: #f7f7f7;
    margin-bottom: 5rem;
-   
 }
 
-.homeblocs
+.container__restaurants--bloc
 {
     margin-left: 1rem;
     width: 90%;
@@ -220,7 +219,7 @@ body
     margin-bottom: 20px;
 }
 
-.homeblocsimg
+.container__restaurants--img
 {
     width: 100%;
     height: 150px;
@@ -228,7 +227,7 @@ body
     object-fit: cover;
 }
 
-.homeblocstitle
+.container__restaurants--title
 {
     font-size: 16px;
     font-weight: 800;
@@ -237,7 +236,7 @@ body
     margin-left: 10px;
 }
 
-.homeblocstxt
+.container__restaurants--txt
 {
     font-size: 16px;
     font-weight: 400;
@@ -246,7 +245,7 @@ body
 
 }
 
-.heart
+.container__restaurants--heart
 {
     float: right;
     margin-right: 20px;
@@ -254,13 +253,17 @@ body
     font-size: 20px;
 }
 
+
+/*Footer*/
+
+
 .footer
 {
     background-color: rgb(43, 42, 42);
     padding-bottom: 1rem;
 }
 
-.logosvg
+.footer--logo
 {
     padding-top: 1rem;
     margin-left: 1rem;
@@ -269,7 +272,7 @@ body
     width: 100px;
 }
 
-.icontxtfooter
+.footer--icontxt
 {
     display: flex;
     flex-direction: row;
@@ -278,19 +281,19 @@ body
     color: white;
 }
 
-.noicontxtfooter
+.footer--noicontxt
 {
     margin-left: 1rem;
 }
 
-.footericon
+.footer--icon
 {
     margin-right: 10px;
     width: 10px;
     font-size: 12px;
 }
 
-.txtfooter 
+.footer--txt 
 {
     font-size: 14px;
     font-weight: 300;
@@ -298,13 +301,9 @@ body
     color: white;
 }
 
-.imgpageresto
-{
-    width: 100%;
-    object-fit: cover;
-}
+/* Style pages restaus*/
 
-.menuresto
+.container__menu
 {
     background-color: #f7f7f7;
     height: auto;
@@ -314,7 +313,13 @@ body
     transform: translateY(-50px);
 }
 
-.entetemenuresto
+.header__imgpagemenu
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+.container__menu--head
 {
     display: flex;
     flex-direction: row;
@@ -322,27 +327,27 @@ body
     justify-content: space-between;
 }
 
-.titlepageresto
+.container__menu--title
 {
     font-family: 'Shrikhand', cursive;
     font-weight: 500 ;
     font-size: 30px;
 }
 
-.barreverte
+.container__menu--barreverte
 {
     height: 4px;
     width: 50px;
     background-color: #99E2D0;
 }
 
-.heartpageresto
+.container__menu--heartmenu
 {
     font-size: 20px;
     color: rgb(99, 99, 99);
 }
 
-.typeplat 
+.container__menu--typeplat 
 {
     font-weight: 300;
     font-size: 18px;
@@ -350,7 +355,7 @@ body
     margin-bottom: 10px;
 }
 
-.etiqmenus
+.container__menu--bloc
 {
     background-color: white;
     border-radius: 20px;
@@ -360,48 +365,29 @@ body
     margin-bottom: 20px;
 }
 
-.infoplat
+.container__menu--infoplat
 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.titreplat 
+.container__menu--titreplat 
 {
     color: rgb(48, 47, 47);
     margin-bottom: 3px;
     font-size: 20px;
 }
 
-.soustitreplat
+.container__menu--soustitreplat
 {
     color: rgb(65, 65, 65);
     font-weight: 300;
 }
 
-.prix
+.container__menu--prix
 {
     font-weight: 800;
     color: rgb(65, 65, 65);
 }
 
-.buttoncommande
-{
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    background: linear-gradient(to top, #9356DC, #FF79DA);
-    width: 190px;
-    height: auto;
-    border-radius: 50px;
-    box-shadow: 3px 3px 5px #c0c0c0;
-}
-
-.txtbuttoncommande
-{
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    padding: 15px 0px;
-}
