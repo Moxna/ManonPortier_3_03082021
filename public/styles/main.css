@@ -199,11 +199,6 @@ body {
   transform: translateY(-35px);
   font-size: 20px;
 }
-.container__restaurants--heart:hover {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /*Footer*/
 .footer {
@@ -270,14 +265,11 @@ body {
   background-color: #99E2D0;
 }
 .container__menu--heartmenu {
-  font-size: 25px;
-  opacity: 0;
+  font-size: 20px;
+  color: #636363;
 }
-.container__menu--heartmenu:hover {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
+.container__menu--heartmenu:active {
+  background-color: linear-gradient(to top, #9356DC, #FF79DA);
 }
 .container__menu--typeplat {
   font-weight: 300;

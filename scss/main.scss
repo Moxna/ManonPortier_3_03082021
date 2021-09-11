@@ -244,6 +244,12 @@ body
         transform: translateY(-35px);
         font-size: 20px;
     }
+
+    &--heart:hover {
+        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 /*Footer*/
@@ -324,10 +330,18 @@ body
     }
 
     &--heartmenu {
-        font-size: 20px;
-        color: rgb(99, 99, 99);
+        font-size: 25px;
+        opacity: 0;
+
     }
 
+    &--heartmenu:hover {
+        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 1;
+    }
+        
     &--typeplat {
         font-weight: 300;
         font-size: 18px;
