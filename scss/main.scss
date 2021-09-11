@@ -239,17 +239,16 @@ body
     }
 
     &--heart {
-        float: right;
-        margin-right: 20px;
-        transform: translateY(-35px);
+        position: absolute;
+        right: 5px;
         font-size: 20px;
+        color: #9356DC;
     }
 
-    &--heart:hover {
-        background: -webkit-linear-gradient(#9356DC, #FF79DA);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &--filledheart {
+        transform: translateX(-20px);
     }
+
 }
 
 /*Footer*/

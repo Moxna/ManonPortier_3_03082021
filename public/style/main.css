@@ -194,15 +194,13 @@ body {
   margin-left: 10px;
 }
 .container__restaurants--heart {
-  float: right;
-  margin-right: 20px;
-  transform: translateY(-35px);
+  position: absolute;
+  right: 5px;
   font-size: 20px;
+  color: #9356DC;
 }
-.container__restaurants--heart:hover {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.container__restaurants--filledheart {
+  transform: translateX(-20px);
 }
 
 /*Footer*/
