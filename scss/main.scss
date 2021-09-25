@@ -24,10 +24,24 @@ $breakpoints: (
         }
       }
 
-      @mixin tablette-only {
+    @mixin tablette-only {
         @media screen and (min-width: map-get($breakpoints, tablette)) {
           flex-direction: row;
           flex-wrap: wrap;
+        }
+      }
+ 
+    @mixin bloc-pc-only {
+        @media screen and (min-width: map-get($breakpoints, pc)) {
+           width: 500px;
+           margin: 20px;
+        }
+      }
+
+    @mixin bloc-tablette-only {
+        @media screen and (min-width: map-get($breakpoints, tablette)) {
+           width: 500px;
+           margin: 20px;
         }
       }
 
@@ -349,6 +363,7 @@ body
 {
     width: 100%;
     object-fit: cover;
+    max-height: 400px;
 }
 
 .container__menu
@@ -403,6 +418,14 @@ body
                 opacity: 1;
             }
 
+    &--bloccontainer {
+        display: flex;
+        flex-direction: column;
+        @include pc-only;
+        @include tablette-only;
+        align-items: center;
+        justify-content: center;
+    }
 
     &--bloc {
         display: flex;
@@ -411,8 +434,11 @@ body
         background-color: $white;
         border-radius: 20px;
         box-shadow: 3px 3px 3px $lightshadow;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 315px;
+        @include bloc-pc-only;
+        @include bloc-tablette-only;
         animation: fadeIn 0.5s ease-in both;
         @for $i from 2 through 8 {
             &:nth-of-type(#{$i}){
@@ -428,12 +454,20 @@ body
         justify-content: center;
         border-radius: 00px 20px 20px 0px;
         width: 0px;
+        transition-duration: 1s;
     }
 
     &--check {
         color: white;
         display: none !important;
         font-size: 30px;
+    }
+
+    @keyframes spin { 
+        100% { 
+            -webkit-transform: rotate(360deg); 
+            transform: rotate(360deg); 
+        }
     }
 
     &--bloc:hover &--addedtocart{ 
@@ -443,6 +477,7 @@ body
 
     &--bloc:hover &--addedtocart &--check {
             display: block !important;
+            animation: spin 0.5s ease-in both;
     }
 
     @keyframes fadeIn {
@@ -455,7 +490,6 @@ body
             transform: translateY(0);
         }
     }
-
 
     &--txts {
         display: flex;
@@ -502,7 +536,6 @@ body
         font-weight: 300;
         text-overflow: ellipsis;
     }
-
 
     &--bloc:hover &--soustitreplat { 
         width: 75%;
