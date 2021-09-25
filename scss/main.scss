@@ -1,3 +1,5 @@
+
+
 /*Réfs*/
 
 $lightshadow : #c0c0c0;
@@ -10,6 +12,25 @@ $black: #000000;
 $gradient: linear-gradient(to top, #9356DC, #FF79DA);
 $lilas: #f8e9ff;
 $purple: #9356DC;
+$breakpoints: (
+    pc: 1000px,
+    tablette: 681px
+    );
+
+    @mixin pc-only {
+        @media screen and (min-width: map-get($breakpoints, pc)) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+
+      @mixin tablette-only {
+        @media screen and (min-width: map-get($breakpoints, tablette)) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+
 
 *
 {
@@ -23,6 +44,8 @@ body
 {
     font-family: 'Roboto', sans-serif;
     margin: auto;
+    min-width: 320px;
+    max-width: 3000px;
 }
 
 .toutelapage
@@ -134,9 +157,19 @@ body
     margin-left: 1rem;
     margin-bottom: 2rem;
 
+    &--container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1080px;
+        margin: 0px auto;
+        align-items: center;
+        justify-content: center;
+        @include pc-only; @include tablette-only;
+    }
+
     &--bloc {
-        margin-right: auto;
         margin-left: auto;
+        margin-right: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -200,20 +233,26 @@ body
     }
 
     &--section {
-        display: block;
+        padding-bottom: 5rem;
         background-color: $lightgray;
-        margin-bottom: 5rem;
+    }
+
+    &--allblocs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include pc-only; @include tablette-only;
     }
 
     &--bloc {
-        margin-left: 1rem;
+        max-width: 350px;
         width: 90%;
-        height: 220px;
+        height: auto;
         background-color: $white;
         border-radius: 10px 10px 10px 10px;
         box-shadow: 10px 5px 5px $lightshadow;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 20px;
     }
 
     &--img {
@@ -238,17 +277,29 @@ body
         margin-left: 10px;
     }
 
+    &--heartcontainer {
+        float: right;
+        margin-right: 20px;
+        transform: translateY(-35px);
+    }
+
     &--heart {
-        position: absolute;
-        right: 5px;
         font-size: 20px;
-        color: #9356DC;
+        color: $ardoise;
     }
 
     &--filledheart {
-        transform: translateX(-20px);
+        opacity: 0;
+        font-size: 20px;
+        position: absolute;
+        background: $gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
+            &--filledheart:hover {
+                opacity: 1;
+            }
 }
 
 /*Footer*/
@@ -328,39 +379,116 @@ body
         background-color: #99E2D0;
     }
 
-    &--heartmenu {
-        font-size: 25px;
-        opacity: 0;
-
+    &--heartmenucontainer {
+        float: right;
+        margin-right: 5px;
     }
 
-    &--heartmenu:hover {
-        background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    &--heartmenu {
+        font-size: 20px;
+        opacity: 1;
+        color: $anthracite;
+    }
+
+    &--filledheartmenu {
+        opacity: 0;
+        font-size: 20px;
+        position: absolute;
+        background: $gradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: 1;
     }
-        
+
+            &--filledheartmenu:hover {
+                opacity: 1;
+            }
+
+
+    &--bloc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $white;
+        border-radius: 20px;
+        box-shadow: 3px 3px 3px $lightshadow;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        animation: fadeIn 0.5s ease-in both;
+        @for $i from 2 through 8 {
+            &:nth-of-type(#{$i}){
+              animation-delay: $i * 200ms;
+            }
+        }
+    }
+
+    &--addedtocart {
+        background-color: #99E2D0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 00px 20px 20px 0px;
+        width: 0px;
+    }
+
+    &--check {
+        color: white;
+        display: none !important;
+        font-size: 30px;
+    }
+
+    &--bloc:hover &--addedtocart{ 
+            width: 15%;
+            padding: 5px 20px;
+    }
+
+    &--bloc:hover &--addedtocart &--check {
+            display: block !important;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    &--txts {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+
+    &--bloc:hover &--txts { 
+        width: 70%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
     &--typeplat {
         font-weight: 300;
         font-size: 18px;
         margin-top: 40px;
         margin-bottom: 10px;
     }
-
-    &--bloc {
-        background-color: $white;
-        border-radius: 20px;
-        box-shadow: 3px 3px 3px $lightshadow;
-        padding: 15px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
     
     &--titreplat {
         color: $anthracite;
         margin-bottom: 3px;
         font-size: 20px;
+    }
+
+    &--bloc:hover &--titreplat { 
+        width: 75%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     &--infoplat {
@@ -372,10 +500,21 @@ body
     &--soustitreplat {
         color: $ardoise;
         font-weight: 300;
+        text-overflow: ellipsis;
+    }
+
+
+    &--bloc:hover &--soustitreplat { 
+        width: 75%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     &--prix {
         font-weight: 800;
         color: $ardoise;
     }
+
+    
 }
